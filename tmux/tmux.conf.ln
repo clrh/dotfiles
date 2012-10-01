@@ -1,8 +1,8 @@
 # rebind master C-b key
-set-option -g prefix C-e
+set-option -g prefix C-a
 
 # Rebind "last window" as C-a C-a in screen
-bind-key e last-window
+bind-key a last-window
 
 # Rebind spliting keys
 unbind %
