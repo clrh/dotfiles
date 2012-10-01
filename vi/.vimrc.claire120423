@@ -1,0 +1,157 @@
+"filetype plugin on
+
+colorscheme obsidian2 
+"colorscheme morning 
+syntax on
+
+ " base
+set number		" affiche les numéros de ligne
+set ruler 		" affiche ligne,colonne en bas à droite
+set nowrap 		" pas de lignes coupées
+set hlsearch 	" surligne à la recherche les mots recherchés
+set sm 			" affiche la parenthèse correspondate
+set incsearch
+set nocompatible
+set history=500
+set et
+set wrap
+set ai
+set ic
+"set tw=80
+"set ts=2
+"set sts=2
+"set sw=2
+
+" indentation intelligente en fonction des languages
+"set smartindent
+"set et
+"set smarttab
+"filetype indent on
+
+"autocmd BufNewFile,BufRead 
+map <F2> :Perldoc<CR>
+map <F3> :Tlist<CR>
+map <F4> :w!<CR> :!perl %<CR>
+" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
+nnoremap <silent> <F12> :BufExplorer<CR>
+nnoremap <silent> <F10> :bn<CR>
+noremap w<down> :blast!<cr>
+noremap w<right> :bnext!<cr>
+noremap w<left> :bprevious!<cr>
+noremap w<up> :ls<cr>:buffer 
+
+let g:tlist_docbk_settings = 'docbk;p:book;t:section'
+
+" Use perl compiler for all *.pl and *.pm files.
+" autocmd BufNewFile,BufRead *.p? compiler perl
+
+" Use pathogen to easily modify the runtime path to include all
+" plugins under the ~/.vim/bundle directory
+" call pathogen#helptags()
+" call pathogen#runtime_append_all_bundles()
+
+" change the mapleader from \ to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Perl
+imap ,pf =head1 NAME<CR><CR>Mod::Dule<CR><CR>=head1 SYNOPSIS<CR><CR>Synopsys<CR><CR>=head1 DESCRIPTION<CR><CR>Description<CR><CR>=head1 FUNCTIONS<CR><CR>=cut<CR><ESC> F i
+imap ,pm =head2 fonction<CR><CR>=cut<ESC> F i
+imap ,wa warn Data::Dumper::Dumper()<ESC>hha
+
+" XHTML structures
+imap ,xhtml <?xml version="1.0" encoding="UTF-8"?><CR><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"<CR>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <CR><html xmlns="http://www.w3.org/1999/xhtml"><CR>  <head><CR>  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><CR><title>Hello world</title><CR><ESC>i  </head><CR><body><CR> <CR><ESC>i </body><CR><ESC>i</html><ESC>kkA
+
+imap ,com <!--   --><ESC>F i
+imap ,ul <ul><CR>  <li></li><CR><li></li><CR></ul><ESC>0xxkkf>a
+imap ,ol <ol><CR>  <li></li><CR><li></li><CR></ol><ESC>0xxkkf>a
+imap ,li <li></li><ESC>0f>a
+imap ,dt <dt></dt><ESC>0f>a
+imap ,$ ${}<ESC>i
+imap ,img <img src=""/><ESC>0f"a
+
+imap ,aa <a href=""></a><ESC>0f"a
+imap ,bloc <stl:block if=""><CR><CR></stl:block><ESC>kk0f"a
+imap ,inli <stl:inline if=""></stl:inline><ESC>0f"a
+imap ,span <span class=""></span><ESC>0f"a
+
+imap ,h1 <h1></h1><ESC>0f>a
+imap ,h2 <h2></h2><ESC>0f>a
+imap ,h3 <h3></h3><ESC>0f>a
+imap ,div <div class=""></div><ESC>0f>a
+imap ,br <br/><ESC>A
+
+imap ,pre <pre></pre><ESC>0f>a
+imap ,pp <p></p><ESC>0f>a
+imap ,bb <b></b><ESC>hhhha
+imap ,ii <i></i><ESC>hhhha
+imap ,in <CR><CR><ESC>ki  
+imap ,tr <tr><CR>  <td></td><CR><td></td><CR></tr><ESC>hhhhXXkkllllla
+imap ,td <td></td><CR><td></td><ESC>hhhhki
+
+imap ,form <form action="" method="post" enctype="multipart/form-data"><CR><CR>  <input type="submit" value="Send"><CR></form><ESC>hhhhhhXXkkk0f"li 
+
+imap ,input <input type="text" name=""/><ESC>0f>hhi
+imap ,file <input type="file" name=""/><ESC>0f>hhi
+imap ,hidden <input type="hidden" name=""/><ESC>0f>hhi
+
+imap ,sele <select name=""><CR>  <option value="a" selected="True"/><CR><option value="b"/><CR></select><ESC>hhhhhhhhXXXkkk0f"li
+
+imap ,checkbox  <input type="checkbox" name="miam" value="choco"/>choco<CR><input type="checkbox" name="miam" value="coffe"/>coffe<ESC>k0/miam<CR>dwi
+
+imap ,radio  <input type="radio" name="sex" value="M"/>M<CR><input type="radio" name="sex" value="F"/>F<ESC>k0fsi
+
+imap ,ta <table cellpadding="0" cellspacing="0"><CR>  <tr><CR> <th></th><CR><th></th><CR></tr><ESC>hhhhXXA<CR><tr><CR> <td></td><CR><td></td><CR></tr><ESC>hhhhXXA<CR></table><ESC>0xxkkkkkkkf>a
+
+map ^T :w!<CR>:!aspell  --language-tag=fr  check %<CR>:e! %<CR>
+map T :w!<CR>:!aspell  --language-tag=fr  check %<CR>:e! %<CR>
+map E :w!<CR>:!aspell  --language-tag=en  check %<CR>:e! %<CR>
+
+"if version >= 540
+"  augroup filetype
+"    autocmd FileType xml '[,']!xsltproc /home/claire/.vim/indent.xsl %
+"  augroup END
+"endif
+"" other autocmds
+"if version>540
+"  autocmd!
+"endif
+
+"autocmd BufWritePost *.pm execute "!prove /home/claire/dev/versions/community/t/searchengine/*"
+"autocmd BufWritePost *.t execute "!prove /home/claire/dev/versions/community/t/searchengine/*"
+"":autocmd BufWritePost * execute '!prove /home/claire/dev/versions/community/t/search/*'
+"":map ,c :sp<cr>:enew<cr>:r!ls /etc<cr>
+"":autocmd BufWritePost * execute "split" | execute "enew" | r!prove /home/claire/dev/versions/community/t/search/*
+""eiro@: :h function-list
+""eiro@: if exists('g:bufferamoi')
+""function ContinuousTest()
+""     if exists('g:ct') 
+""       :e /tmp/ct
+""       :sp /tmp/ct
+""       :!ls
+""     else
+""       :sp /tmp/ct
+""     endif
+""endfunction
+"
+"au BufEnter *
+"\if match( getline(1) , '^\#!') == 0 |
+"\ execute("let b:interpreter = getline(1)[2:]") |
+"\endif
+"
+"function CallInterpreter()
+"    if exists("b:interpreter")
+"         exec ("!".b:interpreter." %")
+"    endif
+"endfunction
+"map <F6> :call CallInterpreter()<CR>
+"
+"function RunTests()
+"    :!ls
+"endfunction
+"map <F7> :call RunTests()<CR>
+
+"map <F6> :w!<CR> :!prove /home/claire/dev/versions/community/t/search/*<CR>
