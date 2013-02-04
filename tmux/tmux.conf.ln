@@ -1,7 +1,7 @@
 # rebind master C-b key
-set-option -g prefix C-a
+set-option -g prefix C-e
 unbind C-b
-bind C-a send-prefix
+bind C-e send-prefix
 
 # force a reload of the config file
 unbind r
@@ -13,7 +13,7 @@ bind - split-window -h
 bind _ split-window -v
 
 # Rebind "last window" as C-a C-a in screen
-bind-key a last-window
+bind-key e last-window
 
 # UTF8
 #set -g status-utf8 on
