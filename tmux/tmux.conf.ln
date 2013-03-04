@@ -7,6 +7,9 @@ bind C-e send-prefix
 unbind r
 bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 
+# Rebind "last window" as C-a C-a in screen
+bind-key e last-window
+
 # Rebind spliting keys
 unbind %
 bind - split-window -h
