@@ -1,6 +1,6 @@
 set nocompatible
 "colorscheme obsidian2
-colorscheme morning
+"colorscheme morning
  
 filetype plugin on
 set autoindent
@@ -18,10 +18,57 @@ set statusline=%f%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " Show non-printable character
 set list
 set listchars=tab:>\ ,trail:.,nbsp:·
+ 
+au BufRead,BufNewFile *.pl,*.pm set expandtab
+au BufRead,BufNewFile *.pl,*.pm set shiftwidth=4
+au BufRead,BufNewFile *.pl,*.pm set softtabstop=4
+au BufRead,BufNewFile *.pl,*.pm set tabstop=4
+ 
+au BufRead,BufNewFile *.tmpl,*.tt set expandtab
+au BufRead,BufNewFile *.tmpl,*.tt set shiftwidth=4
+au BufRead,BufNewFile *.tmpl,*.tt set softtabstop=4
+au BufRead,BufNewFile *.tmpl,*.tt set tabstop=4
+ 
+au BufRead,BufNewFile *.tt setf tt2html
+ 
+" Show perldoc page instead on man when hitting K on a keyword
+au FileType perl setlocal keywordprg=perldoc\ -f
+ 
+map <F2> :w!<CR> :!./build.sh<CR>
+map <F3> :Tlist<Return>
+map <F4> :BufExplorer<CR>
+map <F6> :w!<CR> :Errors<CR>
+ 
+" VimWiki
+"map <F5> \ww
+"map <F6> \w\w
+ 
+" Toggle search highlighting
+map <F7> :set hlsearch!<CR>
+ 
+" perltidy a block of code
+vmap <F8> :!perltidy -q<CR>
+ 
+" \pm on perl module name to open the file in the current window
+nnoremap <Leader>pm :call LoadPerlModule()<CR>
+function! LoadPerlModule()
+	execute 'e `perldoc -l ' . expand("<cWORD>"). '`'
+endfunction
+ 
+"if has("gui_running")
+"	colorscheme koehler
+"	highlight CursorLine guibg=#000030
+ 
+	" hide all gui but menubar
+"	set guioptions+=lLrRbBT
+"	set guioptions-=lLrRbBT
+ 
+"	set guifont=Monospace\ 8
+"	set mousehide
+"endif
 
 syntax on
 
-set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -30,4 +77,5 @@ filetype plugin on    " Enable filetype-specific plugins
 autocmd   FileType pl source ~/.vim/ftplugin/perl.vim
 autocmd   FileType rb source ~/.vim/ftplugin/ruby.vim
 
-
+" DRUPAL
+let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
