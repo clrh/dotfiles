@@ -1,6 +1,9 @@
 [user]
     email = claire.hernandez@biblibre.com
     name = Claire Hernandez
+[http]
+        sslCert = /etc/openvpn/claire_hernandez.pem
+        sslKey = /etc/openvpn/claire_hernandez.pem
 [core]
     editor = vim
 [giggle]
