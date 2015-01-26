@@ -77,5 +77,26 @@ filetype plugin on    " Enable filetype-specific plugins
 autocmd   FileType pl source ~/.vim/ftplugin/perl.vim
 autocmd   FileType rb source ~/.vim/ftplugin/ruby.vim
 
+<<<<<<< HEAD
 " DRUPAL
 let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+=======
+map <F4> :w!<CR> :!perl %<CR>
+map <F3> :w!<CR> :!prove %<CR>
+
+let g:instant_markdown_slow = 1
+
+" Vundle install
+set nocompatible          " be iMproved
+filetype off              " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'parkr/vim-jekyll.git'
+
+filetype plugin indent on " required!
+>>>>>>> tmp add

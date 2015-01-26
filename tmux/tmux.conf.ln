@@ -100,3 +100,5 @@ set -g status-right ‘#[fg=yellow]#(uptime | cut -d “,” -f 2-)’
 #   tmux select-window -t hawkhost:1
 #   tmux -2 attach-session -t hawkhost
 
+# Sane scrolling
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
