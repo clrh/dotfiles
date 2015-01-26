@@ -14,15 +14,19 @@
 		"All Autocomplete",
 		"BracketHighlighter",
 		"Cheat Sheets",
+		"ColorPicker",
 		"Emmet",
 		"Gist",
 		"Git",
 		"GitGutter",
 		"Markdown Preview",
 		"Package Control",
+		"Predawn Twilight Theme",
 		"SublimeREPL",
 		"Terminal",
 		"Terminality",
-		"TerminalProjectFolder"
+		"TerminalProjectFolder",
+		"Theme - Flatland",
+		"Theme - Spacegray"
 	]
 }

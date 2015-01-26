@@ -3,33 +3,25 @@
 	{
 		"selected_items":
 		[
-			[
-				"cabal",
-				"cabal-install"
-			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/home/clrh/dev/foad-simplon-sandbox/fibonacci/test_fibo.hs",
+			"file": "/home/clrh/.config/sublime-text-3/Packages/User/haskellstart.sublime-snippet",
 			"settings":
 			{
-				"buffer_size": 356,
+				"buffer_size": 544,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/Haskell/Haskell.sublime-build",
+	"build_system": "Packages/User/haskell.sublime-build",
 	"command_palette":
 	{
-		"height": 75.0,
+		"height": 264.0,
 		"selected_items":
 		[
-			[
-				"quick",
-				"Git: Quick Commit"
-			],
 			[
 				"defau",
 				"Preferences: Settings - Default"
@@ -81,6 +73,10 @@
 			[
 				"add",
 				"Git: Add Current File"
+			],
+			[
+				"quick",
+				"Git: Quick Commit"
 			],
 			[
 				"git quick",
@@ -173,8 +169,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/clrh/dev/foad-simplon-sandbox",
-		"/home/clrh/dev/foad-simplon-sandbox/fibonacci"
+		"/home/clrh/.config/sublime-text-3/Packages/User"
 	],
 	"file_history":
 	[
@@ -231,6 +226,13 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/clrh/.config/sublime-text-3/Packages/User"
+		}
+	],
 	"groups":
 	[
 		{
@@ -239,19 +241,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/home/clrh/dev/foad-simplon-sandbox/fibonacci/test_fibo.hs",
+					"file": "/home/clrh/.config/sublime-text-3/Packages/User/haskellstart.sublime-snippet",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 356,
+						"buffer_size": 544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								254,
-								254
+								293,
+								293
 							]
 						],
 						"settings":
@@ -315,7 +317,7 @@
 								"bh_double_quote_close",
 								"bh_double_quote_content"
 							],
-							"syntax": "Packages/Haskell/Haskell.tmLanguage"
+							"syntax": "Packages/XML/XML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -370,7 +372,7 @@
 	{
 		"height": 112.0
 	},
-	"project": "foad.sublime-project",
+	"project": "",
 	"replace":
 	{
 		"height": 46.0
@@ -394,10 +396,6 @@
 		"selected_items":
 		[
 			[
-				"dev",
-				"~/dev/foad-simplon-sandbox/foad.sublime-workspace"
-			],
-			[
 				"",
 				"~/dev/foad-simplon-sandbox/foad.sublime-workspace"
 			]
@@ -420,7 +418,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 391.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
