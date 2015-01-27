@@ -1,0 +1,22 @@
+{
+    // "extensions" désigne les extensions pour lesquelles ce fichier s'applique ;
+    "extensions":
+    [
+        "mdown",
+        "txt",
+        "md"
+    ],
+    "auto_complete": true, //"auto_complete" active la complétion automatique avec <TAB> ;
+    //"spell_check": true, // "spell_check" active la vérification orthographique ;
+    //"dictionary": "Packages/Language - French - Français/fr_FR (all variants).dic", // "dictionary" pointe sur le dictionnaire à utiliser pour la vérification orthographique (les dictionnaires proviennent de Libre Office) ;
+    "draw_centered": true, // centre le texte dans la fenêtre ;
+    "word_wrap": "True", // coupe les lignes lors de l'affichage après X caractères ;
+    "wrap_width": 95,
+    "font_size": 10,
+    "gutter": false, //je ne sais pas ce que ça fait, mais c'est défini à false dans le mode Distraction Free, donc je pense que ce n'est pas mauvais... ;
+    "line_numbers": false,//désactive l'affichage du nombre de lignes, mais je songe à le réactiver... ;
+    "line_padding_bottom": 2,
+    "line_padding_top": 2,// ajoutent de l'espacement au-dessous et au-dessus des lignes de texte, pour l'aérer ;
+    "scroll_past_end": true,// permet de faire défiler le texte même quand on arrive à la fin du fichier ;
+    "tab_size": 6//augmente le nombre d'espaces à utiliser pour les tabulations (en réalité Sublime Text utilise bien le caractère <TAB>, mais cette tabulation est affichée pour quelle corresponde à 6 espaces).
+}
