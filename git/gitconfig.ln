@@ -1,4 +1,4 @@
-[user]
+[user] 
     email = claire.hernandez@biblibre.com
     name = Claire Hernandez
 [http]
@@ -40,6 +40,9 @@
     lgv = log --pretty=format:'%h %d %s (%ci) <%an> ' --abbrev-commit
     abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
     wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+    green    = !"git add -A;  git commit -m \"green\""
+    red      = !"git add -A;  git commit -m \"red\""
+    refactor = !"git add -A;  git commit -m \"refactor\""
     unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
     prn = remote prune origin
 # en test
@@ -55,11 +58,14 @@
 [mergetool "mymeld"]
       cmd = $HOME/.git/mygitmerge $BASE $LOCAL $REMOTE $MERGED
 [sendemail]
-    smtpserver = mail.biblibre.com
-    aliasesfile = /home/claire/.git_aliases
-    aliasfiletype = mutt
-    suppresscc = self
+	smtpserver = mail.biblibre.com
+	aliasesfile = /home/claire/.git_aliases
+	aliasfiletype = mutt
+	suppresscc = self
 [bz-tracker "bugs.koha-community.org"]
     path = /bugzilla3
     bz-user = claire.hernandez@biblibre.com
     bz-password = xxx
+[help]
+#    autocorrect=1
+

@@ -80,6 +80,7 @@ autocmd   FileType rb source ~/.vim/ftplugin/ruby.vim
 <<<<<<< HEAD
 " DRUPAL
 let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+<<<<<<< HEAD
 =======
 map <F4> :w!<CR> :!perl %<CR>
 map <F3> :w!<CR> :!prove %<CR>
@@ -100,3 +101,16 @@ Bundle 'parkr/vim-jekyll.git'
 
 filetype plugin indent on " required!
 >>>>>>> tmp add
+=======
+
+"Markdown
+" https://github.com/plasticboy/vim-markdown
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_initial_foldlevel=1
+
+"Pathogen
+execute pathogen#infect()
+
+"Zeal
+nnoremap <silent> <C-K> "zyiw:call system("nohup zeal --query".@z."&")<CR>
+>>>>>>> git & vi

@@ -1,0 +1,8 @@
+sudo aptitude install exuberant-ctags
+$ ctags --languages=perl -R -f TAGS #pour creer le fichier TAGS
+CTRL+Alt Gr+] #curseur placé sur une sub, pour arriver direct sur la sub dans le bon package.
+CTRL + x + ALT Gr+] == auto completion ctags
+
+https://github.com/suan/vim-instant-markdown
+gem install pygments.rb
+

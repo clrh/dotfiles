@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhist_cnt =1
 let g:netrw_dirhist_1='/home/clrh/dotfiles/vi/vim.ln'
+=======
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/claire/dev/supybot/TeamMeteo/test-conf'
+let g:netrw_dirhist_2='/home/claire/dev/supybot/TeamMeteo/test-logs'
+let g:netrw_dirhist_3='/home/claire/dev/supybot/TeamMeteo/backup'
+let g:netrw_dirhist_4='/home/claire/dev/hea-app/environments'
+let g:netrw_dirhist_5='/home/claire/dev/supybot/TeamMeteo/test-conf'
+>>>>>>> git & vi
