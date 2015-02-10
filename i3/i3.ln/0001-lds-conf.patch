@@ -1,0 +1,137 @@
+From 0859fc3c0c4e23d3c8ce45af1837b6d591e089cd Mon Sep 17 00:00:00 2001
+From: Claire Hernandez <claire.hernandez@biblibre.com>
+Date: Fri, 6 Feb 2015 18:50:31 +0100
+Subject: [PATCH] lds conf
+
+---
+ config | 65 +++++++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 39 insertions(+), 26 deletions(-)
+
+diff --git a/config b/config
+index 7b1047b..8f858c3 100644
+--- a/config
++++ b/config
+@@ -27,10 +27,11 @@ font pango:DejaVu Sans Mono 8
+ floating_modifier $mod
+ 
+ # start a terminal
+-bindsym $mod+Return exec i3-sensible-terminal
++#bindsym $mod+Return exec i3-sensible-terminal
++bindsym $mod+Return exec urxvt
+ 
+ # kill focused window
+-bindsym $mod+Shift+Q kill
++bindsym $mod+Shift+A kill
+ 
+ # start dmenu (a program launcher)
+ bindsym $mod+d exec dmenu_run
+@@ -43,7 +44,7 @@ bindsym $mod+d exec dmenu_run
+ bindsym $mod+j focus left
+ bindsym $mod+k focus down
+ bindsym $mod+l focus up
+-bindsym $mod+semicolon focus right
++bindsym $mod+m focus right
+ 
+ # alternatively, you can use the cursor keys:
+ bindsym $mod+Left focus left
+@@ -55,7 +56,7 @@ bindsym $mod+Right focus right
+ bindsym $mod+Shift+j move left
+ bindsym $mod+Shift+k move down
+ bindsym $mod+Shift+l move up
+-bindsym $mod+Shift+colon move right
++bindsym $mod+Shift+M move right
+ 
+ # alternatively, you can use the cursor keys:
+ bindsym $mod+Shift+Left move left
+@@ -74,7 +75,7 @@ bindsym $mod+f fullscreen
+ 
+ # change container layout (stacked, tabbed, toggle split)
+ bindsym $mod+s layout stacking
+-bindsym $mod+w layout tabbed
++bindsym $mod+z layout tabbed
+ bindsym $mod+e layout toggle split
+ 
+ # toggle tiling / floating
+@@ -84,34 +85,34 @@ bindsym $mod+Shift+space floating toggle
+ bindsym $mod+space focus mode_toggle
+ 
+ # focus the parent container
+-bindsym $mod+a focus parent
++bindsym $mod+q focus parent
+ 
+ # focus the child container
+ #bindsym $mod+d focus child
+ 
+ # switch to workspace
+-bindsym $mod+1 workspace 1
+-bindsym $mod+2 workspace 2
+-bindsym $mod+3 workspace 3
+-bindsym $mod+4 workspace 4
+-bindsym $mod+5 workspace 5
+-bindsym $mod+6 workspace 6
+-bindsym $mod+7 workspace 7
+-bindsym $mod+8 workspace 8
+-bindsym $mod+9 workspace 9
+-bindsym $mod+0 workspace 10
++bindsym $mod+ampersand workspace 1: biblibre
++bindsym $mod+eacute workspace 2: firefox
++bindsym $mod+quotedbl workspace 3: term
++bindsym $mod+apostrophe workspace 4: phone
++bindsym $mod+parenleft workspace 5: explorer
++bindsym $mod+minus workspace 6: hangout
++bindsym $mod+egrave workspace 7
++bindsym $mod+underscore workspace 8
++bindsym $mod+ccedilla workspace 9
++bindsym $mod+agrave workspace 10
+ 
+ # move focused container to workspace
+-bindsym $mod+Shift+1 move container to workspace 1
+-bindsym $mod+Shift+2 move container to workspace 2
+-bindsym $mod+Shift+3 move container to workspace 3
+-bindsym $mod+Shift+4 move container to workspace 4
+-bindsym $mod+Shift+5 move container to workspace 5
+-bindsym $mod+Shift+6 move container to workspace 6
+-bindsym $mod+Shift+7 move container to workspace 7
++bindsym $mod+Shift+1 move container to workspace 1: biblibre
++bindsym $mod+Shift+eacute move container to workspace 2: firefox
++bindsym $mod+Shift+3 move container to workspace 3: term
++bindsym $mod+Shift+4 move container to workspace 4: phone
++bindsym $mod+Shift+5 move container to workspace 5: explorer
++bindsym $mod+Shift+6 move container to workspace 6: hangout
++bindsym $mod+Shift+egrave move container to workspace 7
+ bindsym $mod+Shift+8 move container to workspace 8
+-bindsym $mod+Shift+9 move container to workspace 9
+-bindsym $mod+Shift+0 move container to workspace 10
++bindsym $mod+Shift+ccedilla move container to workspace 9
++bindsym $mod+Shift+agrave move container to workspace 10
+ 
+ # reload the configuration file
+ bindsym $mod+Shift+c reload
+@@ -131,7 +132,7 @@ mode "resize" {
+         bindsym j resize shrink width 10 px or 10 ppt
+         bindsym k resize grow height 10 px or 10 ppt
+         bindsym l resize shrink height 10 px or 10 ppt
+-        bindsym semicolon resize grow width 10 px or 10 ppt
++        bindsym m resize grow width 10 px or 10 ppt
+ 
+         # same bindings, but for the arrow keys
+         bindsym Left resize shrink width 10 px or 10 ppt
+@@ -151,3 +152,15 @@ bindsym $mod+r mode "resize"
+ bar {
+         status_command i3status
+ }
++
++# lds config
++exec urxvt -e irssi -p 7778 -c stikked-test -w lds:cerellld:freenode
++exec urxvt -e mutt
++exec /usr/bin/redshift
++exec feh --randomize --bg-fill Images
++exec autocutsel -fork
++exec autocutsel -selection PRIMARY -fork
++exec --no-startup-id i3-msg 'workspace 2: firefox; exec firefox; workspace 1: biblibre'
++exec --no-startup-id i3-msg 'workspace 3: term; exec urxvt; workspace 1: biblibre'
++exec --no-startup-id i3-msg 'workspace 4: phone; exec zoiper; workspace 1: biblibre'
++exec --no-startup-id i3-msg 'workspace 5: explorer; exec pcmanfm; workspace 1: biblibre'
+-- 
+1.9.1
+

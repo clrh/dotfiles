@@ -2,23 +2,23 @@
 	"in_process_packages":
 	[
 	],
-	"installed_dependencies":
-	[
-		"0_package_control_loader",
-		"bz2",
-		"ssl-linux"
-	],
 	"installed_packages":
 	[
 		"BracketHighlighter",
+		"Cheat Sheets",
 		"Dayle Rees Color Schemes",
 		"Emmet",
+		"Git",
 		"GitGutter",
 		"HTML Snippets",
+		"i3 wm",
+		"JavaScript & Coffeescript Build Systems",
+		"Language - French - Français",
 		"LiveReload",
 		"Markdown Extended",
 		"Markdown Preview",
 		"MarkdownEditing",
+		"Mediawiker",
 		"Package Control",
 		"Paraiso Color Scheme",
 		"Predawn",
@@ -28,6 +28,7 @@
 		"SublimeLinter",
 		"SublimeLinter-flake8",
 		"SublimeLinter-pylint",
+		"Terminal",
 		"Theme - Spacegray"
 	]
 }

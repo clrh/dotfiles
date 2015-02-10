@@ -1,9 +1,10 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
-	"font_size": 9,
+	"dictionary": "Packages/Language - French - Français/fr_FR (modern).dic",
+	"font_size": 11,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"Vintage"
 	]
 }

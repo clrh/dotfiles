@@ -1,0 +1,50 @@
+{
+	"mediawiker_pagelist":
+	{
+		"Bokeh wiki":
+		[
+			"PlayGround"
+		]
+	},
+	"mediawiki_site":
+	{
+		"Bokeh wiki":
+		{
+			"domain": "",
+			"host": "wiki.bokeh-library-portal.org",
+			"https": false,
+			"pagepath": "/index.php/",
+			"password": "bib",
+			"path": "/",
+			"username": "chernandez"
+		},
+		"English wikipedia":
+		{
+			"domain": "",
+			"host": "en.wikipedia.org",
+			"pagepath": "/wiki/",
+			"password": "",
+			"path": "/w/",
+			"username": ""
+		},
+		"Mediawiki":
+		{
+			"domain": "",
+			"host": "www.mediawiki.org",
+			"pagepath": "/wiki/",
+			"password": "",
+			"path": "/w/",
+			"username": ""
+		},
+		"Russian wikipedia":
+		{
+			"domain": "",
+			"host": "ru.wikipedia.org",
+			"pagepath": "/wiki/",
+			"password": "",
+			"path": "/w/",
+			"username": ""
+		}
+	},
+	"mediawiki_site_active": "Bokeh wiki"
+}
