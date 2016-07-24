@@ -45,7 +45,7 @@ bind-key -n M-right select-pane -R
 bind-key -n M-up select-pane -U
 bind-key -n M-down select-pane -D
 # use your mouse to select pane
-set -g mouse-select-pane on
+#set -g mouse-select-pane on
 
 # DESIGN-tryings
 
