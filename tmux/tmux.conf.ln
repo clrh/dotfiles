@@ -1,3 +1,7 @@
+
+set -g base-index 1
+set -g pane-base-index 1
+
 # rebind master C-b key
 set-option -g prefix C-e
 unbind C-b
@@ -31,10 +35,35 @@ setw -g automatic-rename
 #On utlise control + flèches pour naviguer entre les terminaux
 bind-key -n C-right next
 bind-key -n C-left prev
+bind-key C-right swap-window -t +1
+bind-key C-left swap-window -t -1
 
 #bind pour split
 bind v source-file ~/.tmux/dev
 
+bind | split-window -h -c '#{pane_current_path}'
+bind - split-window -v -c '#{pane_current_path}'
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+bind-key M-j resize-pane -D
+bind-key M-k resize-pane -U
+bind-key M-h resize-pane -L
+bind-key M-l resize-pane -R
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5
+
+# same as 'o' but zoom the selected pane
+bind O select-pane -t :.+ \; resize-pane -Z
 # pane movement The first grabs the pane from the target window and joins it to the current, the second does the reverse.
 bind-key j command-prompt -p "join pane from:"  "join-pane -s '%%'"
 bind-key s command-prompt -p "send pane to:"  "join-pane -t '%%'"
@@ -105,8 +134,18 @@ set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
 
 # List of plugins
+#set -g @plugin 'tmux-plugins/tmux-sensible'
+#set -g @plugin 'seebi/tmux-colors-solarized'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
+# reload config
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+
+
+#Load special tmux confs
+bind D source-file ~/.tmux/dev
+
+run '~/.tmux/tpm/tpm'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
