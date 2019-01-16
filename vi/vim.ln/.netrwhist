@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/claire/dev/saiku/saiku/saiku-server/target/dist/saiku-server/tomcat/webapps/saiku/WEB-INF/classes/legacy-datasources'
 let g:netrw_dirhist_2='/home/claire/dev/saiku/saiku/saiku-server/target/dist/saiku-server/tomcat/webapps/saiku/WEB-INF/classes/saiku-repository'
+let g:netrw_dirhist_3='/home/claire/dev/koha-src/api/v1/swagger/definitions'
+let g:netrw_dirhist_4='/home/claire/dev/koha-src/Koha/Object'
+let g:netrw_dirhist_5='/home/claire/doc/rgpd/generated/documentation-markdown/scripts'
+let g:netrw_dirhist_6='/home/claire/encryption'
